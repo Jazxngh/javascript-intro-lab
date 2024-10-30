@@ -9,11 +9,13 @@ let colourButtons = document.querySelectorAll(".colpicker");
 console.dir(colourButtons);
 
 for(let i=0; i<colourButtons.length; i++){
-    colourButtons[i].addEventListener("Click", changeColour);
+    colourButtons[i].addEventListener("click", changeColour);
 }
 
 function changeColour(){
-    console.info("I was clicked");
+    console.info(ev.target.classList[0]);
+    let colourClass = ev.target.classList[0] + "Back";
+    document.body.setAttribute("class", colourClass);
 }
 
 document.getElementById("myTestBtn").addEventListener("click", function() { ("Hi I was clicked"); });
