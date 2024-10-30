@@ -9,7 +9,11 @@ let colourButtons = document.querySelectorAll(".colpicker");
 console.dir(colourButtons);
 
 for(let i=0; i<colourButtons.length; i++){
-    colourButtons[i].style.background.Color = "LightGrey";
+    colourButtons[i].addEventListener("Click", changeColour);
+}
+
+function changeColour(){
+    console.info("I was clicked");
 }
 
 document.getElementById("myTestBtn").addEventListener("click", function() { ("Hi I was clicked"); });
